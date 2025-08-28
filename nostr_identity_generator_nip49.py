@@ -350,7 +350,7 @@ def print_identity(identity: NostrIdentity, reveal_priv: bool = False) -> None:
 
 
 def export_flow(identity: NostrIdentity):
-    if yesno("Save keys to a JSON file?", False):
+    if yesno("Save keys to a JSON file?", True):
         default_name = f"nostr_identity_{int(time.time())}.json"
         path = prompt("File path:", default_name)
         try:
